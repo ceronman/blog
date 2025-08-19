@@ -53,6 +53,10 @@ div.post code {
     font-size-adjust: ex-height 0.5;
 }
 
+div.post p code {
+    color: darkgoldenrod;
+}
+
 div.post pre {
     outline: 1px solid #ccc;
     padding: 1em;
