@@ -73,7 +73,7 @@ Not only is _[Loxido](https://github.com/ceronman/loxido)_ (my implementation) o
 
 The very first run of [perf](https://perf.wiki.kernel.org/index.php/Main_Page) showed me a clear target to blame for my poor performance:
 
-![Image 2](/images/my-experience-crafting-an-interpreter-with-rust/screenshot-from-2021-05-08-17-32-48-1.png)
+![Image 2](/images/my-experience-crafting-an-interpreter-with-rust/perf.png)
 
 One of the problems was related to my GC implementation and the way I was dereferencing my index-based pointers. Using vector indices is slower than a regular pointer dereference. An arithmetic operation is needed to get the address of the element, but more importantly, Rust will always check if the index is out of bounds. For the vast majority of use cases, these extra steps are completely negligible, however when you have a VM that processes ~350 million instructions per second, and then you have to do three or four dereferences per instruction, then it shows. But even then, this was not the main problem. The big problem was with some of the workarounds that I had to add to please the borrow checker. I’ll try to explain this:
 
