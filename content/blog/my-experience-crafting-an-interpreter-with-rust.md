@@ -5,7 +5,7 @@ date = 2021-07-22
 
 Last year I finally decided to learn some Rust. The [official book](https://doc.rust-lang.org/book/) by Steve Klabnik and Carol Nichols is excellent, but even after reading it and working on some small code exercises, I felt that I needed more to really understand the language. I wanted to work on a small project to get some hands-on experience, but most of my ideas didn’t feel very well suited for Rust.
 
-Then I started reading the amazing book [Crafting Interpreters](https://craftinginterpreters.com/) by Bob Nystrom. As the name suggests, the book is about writing an interpreter for a dynamic language named Lox. The book is split into two parts: the first one shows how to implement a simple tree-walking interpreter using Java. The second part shows how to implement the same interpreter, but this time using a high-performance bytecode VM using C. I implemented[the first part in Clojure](https://github.com/ceronman/cloxure), and then I realized that the second part was the perfect project for trying Rust.
+Then I started reading the amazing book [Crafting Interpreters](https://craftinginterpreters.com/) by Bob Nystrom. As the name suggests, the book is about writing an interpreter for a dynamic language named Lox. The book is split into two parts: the first one shows how to implement a simple tree-walking interpreter using Java. The second part shows how to implement the same interpreter, but this time using a high-performance bytecode VM using C. I implemented [the first part in Clojure](https://github.com/ceronman/cloxure), and then I realized that the second part was the perfect project for trying Rust.
 
 The domain of language VMs seems to be almost entirely dominated by C/C++. VMs are very performance sensitive and often require a lot of micro-optimization. This project seemed like a perfect exercise to compare Rust against these languages. I was especially interested in checking if Rust could match the same speed while providing better safety and ergonomics.
 
@@ -13,7 +13,7 @@ _Disclaimer: It’s been a long time since I used C/C++, probably more than 15 y
 
 Now, matching the speed of the C version of the Lox interpreter (_clox_) is no easy feat. While many books on the topic of compilers and interpreters focus exclusively on explaining the algorithms and leave performance as an afterthought, Crafting Interpreters shows how to implement a really fast interpreter. For example, in some simple benchmarks, it is common to observe that _clox_ is 2x or even 3x faster than equivalent Python or Perl code.
 
-_Side note: Take this comparison with a grain of salt. The reason Python and Perl are slower is that these languages provide more flexibility and that comes with a performance cost. This is better explained in_[_Wren’s web page_](https://wren.io/performance.html)_, which is another language by the same author whose interpreter inspired clox. So yes, the comparison with Python and Perl is a bit oranges and apples, but the main point here is that clox performance is really good and very production-ready._
+_Side note: Take this comparison with a grain of salt. The reason Python and Perl are slower is that these languages provide more flexibility and that comes with a performance cost. This is better explained in _[_Wren’s web page_](https://wren.io/performance.html)_, which is another language by the same author whose interpreter inspired clox. So yes, the comparison with Python and Perl is a bit oranges and apples, but the main point here is that clox performance is really good and very production-ready._
 
 Using only safe code
 --------------------
@@ -26,7 +26,7 @@ I also wanted to take advantage of Rust’s advanced type system as much as poss
 
 The beginning of writing the lox interpreter in Rust was a breeze. The compiler in particular was a joy to write. Rust felt much nicer to write than the old and quirky C. The initial parts of the VM were also really nice to write thanks to sum types, compile-time checks, and a ready-to-use standard library. However, things started to get very tricky once I worked on more advanced stuff such as closures and classes. The _clox_ implementation uses pointers and aliasing very liberally, while Rust’s aliasing rules are very strict and the borrow checker disallows many patterns to ensure safety. Because of this, I spent a ton of time finding workarounds to make the borrow checker happy.
 
-_Side note: Dealing with the borrow checker is a well-known struggle for Rust beginners. This was the reason why I spent so much time here. The rules are simple but for some reason, it’s really hard to keep track of them in a big system. I would often write huge refactorings thinking that they would be a solution to a borrow checker error, just to get another one at the end of the refactoring. This happens less frequently the more experience I get with the language, but it still happens. The book_[_Learn Rust With Entirely Too Many Linked Lists_](https://rust-unofficial.github.io/too-many-lists/)_has some good examples of how brutally complex the borrow checker can be._
+_Side note: Dealing with the borrow checker is a well-known struggle for Rust beginners. This was the reason why I spent so much time here. The rules are simple but for some reason, it’s really hard to keep track of them in a big system. I would often write huge refactorings thinking that they would be a solution to a borrow checker error, just to get another one at the end of the refactoring. This happens less frequently the more experience I get with the language, but it still happens. The book _[_Learn Rust With Entirely Too Many Linked Lists_](https://rust-unofficial.github.io/too-many-lists/)_ has some good examples of how brutally complex the borrow checker can be._
 
 A garbage collector in safe Rust
 --------------------------------
@@ -35,7 +35,7 @@ By far the hardest part to implement in my safe Rust implementation of Lox was t
 
 One quick idea that crossed my mind was that perhaps I could skip the GC completely. If Rust can be memory safe without GC, perhaps I could use the same mechanisms to do the same for Lox. For example, using reference counted smart pointers. But I quickly discarded this idea. The Lox language doesn’t have the strict rules that Rust has; it’s easy to create cyclic data structures that would leak memory if implemented using reference counting. A GC is a must here.
 
-So I got an idea from a[very interesting talk at RustConf 2018 by Catherine West](https://www.youtube.com/watch?v=aKLntZcp27M&t=1960s). A common workaround in the Rust world to deal with graph-like structures with cycles is to use vector indices as some sort of pointer. I decided to study the code of some popular crates such as [id-arena](http://id-arena/) and [typed-arena](https://crates.io/crates/typed-arena) that use this concept in some way. But the main issue with _id-arena_ is that it doesn’t support deletion of individual objects because there is the risk of running into [the ABA problem](https://en.wikipedia.org/wiki/ABA_problem). This happens when you delete an object and later reuse its slot while there is a live reference somewhere, which will then be pointed to the wrong place in the vector. There are ways to solve this issue, such as using a [generational arena](https://crates.io/crates/generational-arena), but this felt like over-complicating things.
+So I got an idea from a [very interesting talk at RustConf 2018 by Catherine West](https://www.youtube.com/watch?v=aKLntZcp27M&t=1960s). A common workaround in the Rust world to deal with graph-like structures with cycles is to use vector indices as some sort of pointer. I decided to study the code of some popular crates such as [id-arena](http://id-arena/) and [typed-arena](https://crates.io/crates/typed-arena) that use this concept in some way. But the main issue with _id-arena_ is that it doesn’t support deletion of individual objects because there is the risk of running into [the ABA problem](https://en.wikipedia.org/wiki/ABA_problem). This happens when you delete an object and later reuse its slot while there is a live reference somewhere, which will then be pointed to the wrong place in the vector. There are ways to solve this issue, such as using a [generational arena](https://crates.io/crates/generational-arena), but this felt like over-complicating things.
 
 One day I realized something that now feels so obvious that I’m almost ashamed to admit it: I am writing a garbage collector and its main job is to find objects with no references from the live parts of the program. This means that, if my GC works correctly, I should not worry about the ABA problem at all, because the GC would ensure that there will be no live references of the freed objects.
 
@@ -67,12 +67,14 @@ After having a working Lox interpreter and a green test suite to validate any ch
 
 The first step is, of course, measuring the performance. I decided to use the [same benchmark programs available in the crafting interpreters repository](https://github.com/munificent/craftinginterpreters/tree/master/test/benchmark). This way of measuring might not be the best, but it’s good enough for a language without any real-world programs. I also decided to manually transpile the benchmark programs to Python and Perl to have some point of comparison. I was expecting some bad results for my very first implementation, but they were much worse than I anticipated:
 
-[![Image 1](https://ceronman.com/wp-content/uploads/2021/07/image-2.png?w=884)](https://ceronman.com/wp-content/uploads/2021/07/image-2.png)
+![Image 1](/images/my-experience-crafting-an-interpreter-with-rust/image-2.png)
+
 Not only is _[Loxido](https://github.com/ceronman/loxido)_ (my implementation) often several times slower than _clox_, but, in many cases, it’s even slower than _jlox_ (the tree walking implementations written in Java)! After the initial shock, I realized that there was no other way than to start profiling and shave those times as much as possible.
 
 The very first run of [perf](https://perf.wiki.kernel.org/index.php/Main_Page) showed me a clear target to blame for my poor performance:
 
-[![Image 2](https://ceronman.com/wp-content/uploads/2021/07/screenshot-from-2021-05-08-17-32-48-1.png?w=937)](https://ceronman.com/wp-content/uploads/2021/07/screenshot-from-2021-05-08-17-32-48-1.png)
+![Image 2](/images/my-experience-crafting-an-interpreter-with-rust/screenshot-from-2021-05-08-17-32-48-1.png)
+
 One of the problems was related to my GC implementation and the way I was dereferencing my index-based pointers. Using vector indices is slower than a regular pointer dereference. An arithmetic operation is needed to get the address of the element, but more importantly, Rust will always check if the index is out of bounds. For the vast majority of use cases, these extra steps are completely negligible, however when you have a VM that processes ~350 million instructions per second, and then you have to do three or four dereferences per instruction, then it shows. But even then, this was not the main problem. The big problem was with some of the workarounds that I had to add to please the borrow checker. I’ll try to explain this:
 
 The core of a VM is basically a huge loop that increments the _program counter_ (PC), grabs the next instruction and runs a big `match` expression. The PC is part of the current frame. The current frame has a reference to a closure object, which has a reference to a function object, which then has a reference to the chunk of bytecode that contains the instructions. In code it roughly looks like this:
@@ -111,7 +113,7 @@ loop {
 
 This would increase the speed considerably. But there is a problem: Rust is not very happy about it. The way my implementation works is that the GC owns every object created. If I need an object, I could borrow it, and while I borrow it I’m also borrowing the whole GC. Because of Rust’s aliasing rules, if I decide to have a long-lived reference to the current chunk of byte code, I won’t be able to ever borrow mutably from the GC. So this causes a ton of borrow checker complaints. That’s why I ended up returning every borrow immediately. But this implies a ton of unnecessary dereferences.
 
-_Side note: A similar issue with the borrow checker that I often encountered is the one of interprocedural conflicts. There is a nice_[_blog post by Niko Matsakis_](http://smallcultfollowing.com/babysteps/blog/2018/11/01/after-nll-interprocedural-conflicts/)_explaining this problem. I would love to see Rust improving in this area, as I see it as a major headache for beginners._
+_Side note: A similar issue with the borrow checker that I often encountered is the one of interprocedural conflicts. There is a nice _[_blog post by Niko Matsakis_](http://smallcultfollowing.com/babysteps/blog/2018/11/01/after-nll-interprocedural-conflicts/)_ explaining this problem. I would love to see Rust improving in this area, as I see it as a major headache for beginners._
 
 I tried quite some different approaches to work around this with safe Rust, but I failed on every single one of them. This was often frustrating because it required long refactorings and it was only until the end that I realized that it doesn’t work.
 
@@ -133,7 +135,8 @@ let chunk = frame.closure.function.chunk;
 
 This simplified a lot of code, and after these changes, my benchmarks improved considerably:
 
-[![Image 3](https://ceronman.com/wp-content/uploads/2021/07/image-3.png?w=884)](https://ceronman.com/wp-content/uploads/2021/07/image-3.png)
+![Image 3](/images/my-experience-crafting-an-interpreter-with-rust/image-3.png)
+
 I was still far from the speed of _clox_, but at least I was already better than _jlox_ and very close to Python and Perl.
 
 Improving HashMap performance
@@ -149,7 +152,7 @@ With this tiny change I was able to shave up to 45% of the running time of some 
 
 Later I found out that the Rust compiler uses another hashing algorithm called [fxhash](https://crates.io/crates/fxhash). Even though _aHash_ claims to be faster than _fxhash_, given how easy it is to switch algorithms, I decided to try it. I was surprised to find improvements on all of the benchmarks. In some cases shaving up to 25% of time from the _aHash_ results!
 
-_Side note: Don’t get super excited about these results. There is a very good reason why Rust uses SipHash by default. Algorithms such as FNV and fxhash are prone to_[_algorithmic complexity DOS attacks_](https://en.wikipedia.org/wiki/Algorithmic_complexity_attack)_. It’s probably not a good idea to use them for an interpreter. But given that this is not a real-world language, and I’m trying to match clox speed using FNV, I decided to ignore this fact for the moment. aHash, however, claims to be DOS resistant, which might be a very interesting option for a real language._
+_Side note: Don’t get super excited about these results. There is a very good reason why Rust uses SipHash by default. Algorithms such as FNV and fxhash are prone to _[_algorithmic complexity DOS attacks_](https://en.wikipedia.org/wiki/Algorithmic_complexity_attack)_. It’s probably not a good idea to use them for an interpreter. But given that this is not a real-world language, and I’m trying to match clox speed using FNV, I decided to ignore this fact for the moment. aHash, however, claims to be DOS resistant, which might be a very interesting option for a real language._
 
 The improvements of switching hash function were quite significant. However, the profiler kept showing some performance bottlenecks caused by hash table operations. I also profiled _clox_ and I found out that hash operations were not taking that much time there. I had to investigate more.
 
@@ -182,7 +185,7 @@ As usual with polymorphism, this was short and elegant. I liked it a lot. Howeve
 
 So instead of using a trait object, I rewrote the GC to use an `enum` instead. Then I wrote a `match` expression that would do the right tracing logic for each type. This is a bit less flexible, and it also wastes memory because the `enum` effectively makes all objects use the same space. But it also improved tracing speed considerably with up to 28% less time for the most problematic benchmark.
 
-_Side note: clox uses a different approach called_[_Struct Inheritance_](https://craftinginterpreters.com/strings.html#struct-inheritance)_. There is a struct that acts as a header and contains meta-information about each object. Then each struct that represents an object managed by the GC has this header as its first field. Using_[_type punning_](https://en.wikipedia.org/wiki/Type_punning)_, it’s possible to cast a pointer to the header to a specific object and vice versa. This is possible because in C structs are laid out in the same order as defined in the source. Rust by default doesn’t guarantee the order of the data layout, so this technique is not possible. There are ways to tell the Rust compiler to use the same data layout as C, which is used for compatibility, but I wanted to stay with Rust as intended._
+_Side note: clox uses a different approach called _[_Struct Inheritance_](https://craftinginterpreters.com/strings.html#struct-inheritance)_. There is a struct that acts as a header and contains meta-information about each object. Then each struct that represents an object managed by the GC has this header as its first field. Using _[_type punning_](https://en.wikipedia.org/wiki/Type_punning)_, it’s possible to cast a pointer to the header to a specific object and vice versa. This is possible because in C structs are laid out in the same order as defined in the source. Rust by default doesn’t guarantee the order of the data layout, so this technique is not possible. There are ways to tell the Rust compiler to use the same data layout as C, which is used for compatibility, but I wanted to stay with Rust as intended._
 
 Small unsafety speedups
 -----------------------
@@ -197,7 +200,8 @@ _Side note: How can clox live with all these unchecked pointer arithmetic? Well,
 
 After the tweaks, my Rust implementation finally started to get really close to _clox_:
 
-[![Image 4](https://ceronman.com/wp-content/uploads/2021/07/image-5.png?w=884)](https://ceronman.com/wp-content/uploads/2021/07/image-5.png)
+![Image 4](/images/my-experience-crafting-an-interpreter-with-rust/image-5.png)
+
 For most benchmarks, the running time of _loxido_ is between 20% and 50% more than _clox_. It’s close, but not entirely satisfactory. Unfortunately, I reached a point where profiling my existing benchmarks doesn’t give me clear information about what parts of the code are making _loxido_ slower.
 
 I probably need to write some more targeted benchmarks. And I should start looking for clues beyond the profiler data, such as checking for cache misses, branch mispredictions and taking a look at the generated machine code. But this goes beyond my available time and knowledge, so I decided to leave _loxido_ as it is here.
