@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/Bitter-Regular.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/Bitter-Bold.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Bitter";
+    font-style: italic;
+    font-weight: 400;
+    src: url("fonts/Bitter-Italic.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Bitter", serif;
+    max-width: 70ch;
+    padding: 2ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+blockquote {
+    background: #fafafa;
+    font-style: italic;
+    padding: 0.5em;
+}
+
+h1.title {
+    font-size: xx-large;
+}
+
+p.subtitle {
+    color: lab(56% 0 0);
+}
+
+code {
+    font-family: "JetBrains Mono", monospaced;
+    font-size-adjust: ex-height 0.5;
+}
+
+pre {
+    outline: 1px solid #ccc;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
