@@ -38,7 +38,7 @@ Early error detection is one advantage of good tooling support. Another interest
 
 Anders Hejlsberg’s [introduction video](http://channel9.msdn.com/posts/Anders-Hejlsberg-Introducing-TypeScript) to TypeScript contains more interesting details about how annotations are really useful.
 
-While playing with TypeScript I couldn’t stop thinking how cool would be to have something like that in Python. Then I realized that Python had syntax for annotations years before TypeScript or Dart were even planned. [PEP 3107](http://www.python.org/dev/peps/pep-3107/)introduced function annotations in Python. Here is a small example:
+While playing with TypeScript I couldn’t stop thinking how cool would be to have something like that in Python. Then I realized that Python had syntax for annotations years before TypeScript or Dart were even planned. [PEP 3107](http://www.python.org/dev/peps/pep-3107/) introduced function annotations in Python. Here is a small example:
 
 ```cpy
 def greet(name: str, age: int) -> str:
