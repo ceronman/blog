@@ -1,0 +1,10 @@
++++
+title = "Vala"
+date = 2007-08-10
++++
+
+These days, a lot of people on [GNOME planet](http://planet.gnome.org/) are talking about [Vala](http://live.gnome.org/Vala), a new programming language aimed to facilitate the development of applications and libraries for the GNOME platform. Vala is very similar to C#, but what is interesting about it, is that it’s perfectly integrated with the Glib/GObject object system. The compiler translates the Vala source code into C. It uses GObject to create classes and interfaces, and GIDL metadata for introspection. This has some advantages: there is no need for any additional runtime, Vala programs are compatible at ABI level with C programs, writing bindings for existing GNOME libraries is really easy and straightforward. [Alberto Ruiz wrote](http://aruiz.typepad.com/siliconisland/2007/08/the-first-vala-.html) about how simple was to write a binding for GtkMozEmbed. After look at how [traumatic](http://guadec.org/node/585) were the Java bindings for Gtk, or how difficult has been the creation of GStreamer bindings for Mono, I think this is the best feature of Vala.
+
+Anyway, I think Vala still lacks some key tools in order to become a real choice for GNOME developers. In the case of Mono, there is a great advantage called [MonoDevelop](http://www.mono-project.com/). Days ago, version 0.15 of this awesome IDE was released. With no doubt, I think this is the best IDE for GNOME. The GUI editor, the subversion integration, the localization support and autotools integration are very appreciated features. Of course, is not perfect, It lacks a debugger and fixes for some annoying bugs, but it’s a very active project and has a great community behind it.
+
+And talking about languages, at the end of this month, it should be released the alpha version of Python 3.0. On June, Guido van Rossum published a [report](http://www.artima.com/weblogs/viewpost.jsp?thread=208549) about the final decisions concerning Python 3000. I am very happy with most of the changes, it was time to break some backwards compatibility. Python will be even better that what it is now.
