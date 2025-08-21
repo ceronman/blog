@@ -1,4 +1,4 @@
-post = "https://ceronman.com/2006/07/24/tres-meses-tres-eventos/"
+post = "https://ceronman.com/2005/01/29/dos-semanas-con-ubuntu/"
 slug = None
 
 import subprocess

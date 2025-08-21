@@ -1,0 +1,18 @@
++++
+title = "Camino a UMLCanvas 2.0"
+date = 2005-08-16
++++
+
+## MonoUML
+
+Estos días estoy trabajando bastante en sacar adelante, de una vez por todas, UMLCanvas# 2.0. El trabajo con System.Drawing (GDI+) es bastante agradable. En comparación con GnomeCanvas, System.Drawing es de más bajo nivel, pero tiene la ventaja de ser mucho más flexible. Luego de ver [la noticia de que GTK 2.8 ahora requiere Cairo](http://mail.gnome.org/archives/gnome-announce-list/2005-August/msg00054.html), estoy aún más convencido de que la elección ha sido la adecuada. Aunque lo que hay hasta ahora es bastante primitivo, creo que con todo lo que aprendimos haciendo la primera versión de UMLCanvas#, podemos avanzar lo suficientemente rápido.
+
+El trabajo con Gtk# y System.Drawing es bastante interesante. Gracias a Gtk.DotNet es posible combinar dos librerías de Widgets: Gtk# y Windows.Forms. Más específicamente, Gtk.DotNet es un puente entre Gdk.Drawable y System.Drawing.Graphics, ahora como sabemos que Gtk se basa en Gdk y que Windows.Forms se basa en System.Drawing, podemos llevar esto a la interoperabilidad entre librerías que mencioné al principio.
+
+El problema que tiene Gtk.DotNet es que está muy poco (por no decir nada) documentado. Prácticamente hay que aprender a base de ensayo y error. No lo digo por Gtk.DotNet en sí (que en realidad es sólo una clase y un método), sino en la interoperabilidad de las dos librerías como tal. Por ejemplo, uno de los problemas que tuve fue que no sabía como hacer para redibujar sólo una parte del canvas y no todo, cuando se usa sólo Windows.Forms, esto usualmente se hace invalidando el Control en dónde se está dibujando, para ello se hace uso del método Invalidate() de la clase Control. Sin embargo, cuando se combinan las dos librerías, se está dibujando sobre un objeto S.D.Graphics pero no existen ningún objeto Control; en su lugar se usa un Gtk.Widget (más específicamente un Gtk.DrawingArea). Lo que hay que hacer entonces es usar Gtk.Widget.QueueDrawArea() para invalidar un rectángulo. Como dije antes, no puede saber esto sino a base de un sistema de prueba y error.
+
+Lamentablemente esto de la falta de documentación se está volviendo un común denominador en las librerías de Mono. Aunque duela decirlo, la única parte que está bien documentada es la parte que también hace MS (claro que una de las ventajas de Mono es poder aprovecharnos de todo eso). Prometo que una vez que haya avanzado un poco más con UMLCanvas# haré algo de documentación sobre Gtk.DotNet.
+
+## SLUD 4 y JSL
+
+En octubre estaré viajando para Bogotá para asistir a dos eventos de Software Libre. Por un lado están las [Primeras Jornadas de Software Libre](http://el-directorio.org/index.php/JSL), las cuales vienen a llenar el vacío que deja el Congreso Internacional de Software Libre que se hacía aquí en Colombia. Creo que esta versión de las JSL más bien debería ser la cero, porque todavía falta mucho para consolidar este evento. Por otro lado, esta la [IV Semana Linux de la Universidad Distrital](http://glud.udistrital.edu.co/slud4/ponencias/), la cual es organizada por nuestros amigos del [Grupo Linux de la Universidad Distrital (GLUD)](http://glud.udistrital.edu.co/). Este último evento parece que va a estar muy interesante, yo por mi parte envíe dos propuestas de ponencia: “Programación Multimedia con Mono” y “El lenguaje de programación Boo”, espero que acepten aunque sea una de ellas. En total en el [GLUC](http://gluc.unicauca.edu.co/) enviamos 10 propuestas, así que va a haber bastante participación por parte de nuestro grupo.
