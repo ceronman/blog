@@ -1,4 +1,4 @@
-post = "https://ceronman.com/2005/01/29/dos-semanas-con-ubuntu/"
+post = "https://ceronman.com/2004/08/24/my-first-post/"
 slug = None
 
 import subprocess
@@ -25,11 +25,14 @@ for line in open("newpost.md"):
         content = True
         continue
 
+    if "![Image 1](https://ceronman.com/" in line:
+        content = False
+        continue
+
     if '[Skip to content]' in line:
         continue
 
     if '*   Tagged' in line:
-        content = False
         continue
 
     if content:
