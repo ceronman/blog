@@ -3,8 +3,6 @@ title = "Regresando de Vacaciones"
 date = 2005-07-21
 +++
 
-## Vacaciones
-
 Acaban de terminar mis vacaciones de 15 días. Durante este tiempo me he dedicado a hacer nada, descansar, dormir hasta tarde, ver películas y pasarme algunos videojuegos. Incluso desde antes de entrar a vacaciones he estado bastante inactivo en todas las cosas referentes a software libre en las que estoy; ahora, después de terminadas las vacaciones, tengo baterías nuevas para continuar con todo.
 
 ## Fedora

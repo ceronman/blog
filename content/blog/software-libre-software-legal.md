@@ -3,8 +3,6 @@ title = "Software Libre, Software Legal"
 date = 2005-02-04
 +++
 
-## GLUC
-
 En el [GLUC](http://gluc.unicauca.edu.co/) nos ha ido bastante bien por estos días, la Vicerectoría de Bienestar y Cultura de la [Universidad del Cauca](http://www.unicauca.edu.co/) nos aprobó un proyecto bastante interesante, se trata de una Campaña antipiratería y pro-software libre llamada [“Software Libre, Software Legal”](http://gluc.unicauca.edu.co/wiki/index.php/Archivo:Campa%F1a-antipirateria.sxw). La ídea del proyecto es dar una serie de charlas que concientisen sobre por qué no se debe usar software pirata y por qué es mejor usar software libre en su lugar. Con la aprobación del proyecto, el grupo recibirá una cantidad de dinero con la cual se piensa hacer afiches de publicidad, regalar distribuciones de Linux, y programas libres para Windows entre otras cosas. Uno de los puntos claves del proyecto es la participación en la Ciudad de el [Primer Festival Latinoamericano de Instalación de Software Libre – FLISOL](http://ingenieria.ean.edu.co/%7Eazul/svnwiki.cgi/colibri/fisl/default), del cual ya había hablado previamente. Esperamos que con el dinero que nos de la universidad podamos realizar un gran evento aquí en Popayán.
 
 ## Grupo Mono.

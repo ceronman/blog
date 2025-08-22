@@ -3,7 +3,6 @@ title = "Distributed Version Control"
 date = 2008-04-14
 +++
 
-
 Actualmente se está dando una avalancha de migraciones desde sistemas de control de versiones centralizados ([Subversion](http://subversion.tigris.org/)) hacia sistemas distribuidos. Prácticamente todos los grandes proyectos de software libre o ya migraron o están en discusiones sobre la migración o están usando sistemas paralelos.
 
 A diferencia de lo que sucedió con Subversion, donde también hubo una avalancha de migraciones desde [CVS](http://en.wikipedia.org/wiki/Concurrent_Versions_System), en esta ocasión hay varias buenas alternativas, lo que hace la cosa mucho más interesante. La _guerra_ entre [Git](http://git.or.cz/), [Mercurial](http://www.selenic.com/mercurial/) y [Bazaar](http://bazaar-vcs.org/), está generando un montón de innovaciones en el campo del control de versiones. Nos está beneficiando mucho a nosotros los usuarios.

@@ -3,7 +3,6 @@ title = "Is Rust a Functional Language in Disguise?"
 date = 2020-09-17
 +++
 
-
 This is something I’ve been asking myself while learning Rust. Yes, I know that this sounds like a weird question to ask as it’s no secret that Rust has huge influence from the functional programming world. Closures, iterators, pattern matching, algebraic data types; these are features inspired by FP languages, so obviously you can do functional programming with Rust. But that’s not really my question. What I’m asking is if Rust is a **mainly** functional language.
 
 These days most mainstream imperative languages have functional features, you can do FP in any of them, but that doesn’t mean that those languages are considered functional. On the other hand, some languages are designed mainly to be functional, I’m talking about Haskell, Clojure, OCaml or Erlang. So, to be more clear, I can rephrase my question as: Is Rust a language designed to be used mainly for functional programming? Or is it another imperative language where you can optionally use FP?

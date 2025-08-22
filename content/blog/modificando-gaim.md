@@ -3,7 +3,6 @@ title = "Modificando Gaim"
 date = 2006-06-13
 +++
 
-
 Uso [Gaim](http://gaim.sourceforge.net/) para manejar todas mis conversaciones de mensajería instantánea. Me gusta tener todas las conversaciones en la misma ventana, no importa de qué red sea. Gaim me permite tener mis conversaciones de IRC, MSN, Yahoo y Google en la misma ventana. Sin embargo, hay algo que siempre me ha molestado de usar Gaim como cliente de IRC: No se puede ver en la lista de usuarios quién está ausente o _away._ Otros clientes como [XChat](http://www.xchat.org/) o [Chatzilla](http://www.mozilla.org/projects/rt-messaging/chatzilla/) si hacen esto. Así que decidí aprovechar las ventajas del software libre y me propuse modificar Gaim para realizara esta tarea.
 
 Aquí hay un pantallazo de XChat mostrando los usuarios _away_ (en gris).

@@ -124,3 +124,11 @@ img.logo {
     display: inline-block;
     height: 1em;
 }
+
+h2.post-title {
+    margin-bottom: 0;
+}
+
+article p.subtitle {
+    margin-top: 0;
+}

@@ -3,8 +3,6 @@ title = "Cairo"
 date = 2005-04-17
 +++
 
-## Cairo
-
 Por estos días ando experimentando con [Cairo](http://www.cairographics.org/) + [Gtk#](http://gtk-sharp.sourceforge.net/) en [Mono](http://www.mono-project.com/). La ídea es que [Cairo](http://www.cairographics.org/) parece ser una muy buena alternativa para se usada en [UMLCanvas#](http://monouml.sourceforge.net/) en el futuro. Además, dado que [parece](http://live.gnome.org/ThreePointZero) que [GnomeCanvas](http://developer.gnome.org/doc/API/2.0/libgnomecanvas/GnomeCanvas.html) pronto quedará obsoleto, dado que [Cairo](http://www.cairographics.org/) ahora es la base para [GTK+](http://www.gtk.org/), parece que esta librería representa el futuro en cuanto a gráficos vectoriales.
 
 Comenzar con [Cairo](http://www.cairographics.org/) en [Mono](http://www.mono-project.com/) ha sido bastante dificil; existe muy poca documentación y casi ningún ejemplo. Otro problema es que, al parecer, no hay un binding de [GtkCairo](http://www.cairographics.org/GtkCairo) para [Mono](http://www.mono-project.com/), con lo cual hay hacer uso de PInvoke. Pero bien, hay que seguir experimentando, pues [Cairo](http://www.cairographics.org/) se ve muy interesante.

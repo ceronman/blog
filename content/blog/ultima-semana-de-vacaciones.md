@@ -3,8 +3,6 @@ title = "Última semana de vacaciones"
 date = 2005-01-04
 +++
 
-## Año Nuevo
-
 Bien, tristemente esta es mi última semana de vacaciones. Pero bueno, pero no me quejo mucho; logré hacer muchas cosas que quería hacer y descasé bastante. Aún me queda algo de tiempo y quiero aprovecharlo al máximo.
 
 Estos primeros días de 2005 los he dedicado a descansar más que todo. Sin embargo, esta semana ya vuelvo con todo para dedicarle un poco a los proyectos en los cuales estoy colaborando.

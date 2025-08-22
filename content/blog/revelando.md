@@ -3,8 +3,6 @@ title = "Revelando"
 date = 2005-11-29
 +++
 
-## Curso de Fotografía
-
 Hace unas semanas me inscribí en un curso de fotografía que estaba dando el Foto Club de la [Universidad](http://www.unicauca.edu.co/). Desde hacía varios semestres quería inscribirme en el curso, pero no había tenido tiempo, este semestre tampoco tenía, así que me tocó decidirme e inscribirme como sea, ya que de otra forma nunca lo iba a hacer. En fin, el curso es a la antigua, con cámaras analógicas manuales, yo he estado usando la magnifica [Canon A1](http://en.wikipedia.org/wiki/Canon_A-1) de mi papá. Al principio quería comprarme una cámara digital, pero la verdad es que me he dado cuenta que la fotografía analógica tiene su encanto, por eso tengo pensado conseguirme una [Canon AE1](http://en.wikipedia.org/wiki/Canon_AE-1) o similar, que sea manual.
 
 En una de las prácticas del curso tomamos unas fotos en blanco y negro por varias zonas de [Popayán](http://es.wikipedia.org/wiki/Popay%C3%A1n). Hicimos todo el proceso manual, desde la escoger objetivo, filtros, velocidad y diafragma, hasta el mismo revelado y copiado. Este último, el revelado, es uno de los aspectos más interesantes de la fotografía analógica. Todo el proceso que va desde desenrollar el rollo completamente a oscuras en la etapa de revelado hasta ver cómo va apareciendo lentamente la foto en el papel bajo una tenue luz roja en la etapa de copiado, es simplemente fascinante.

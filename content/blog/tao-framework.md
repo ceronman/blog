@@ -3,8 +3,6 @@ title = "Tao Framework"
 date = 2005-05-30
 +++
 
-## Tao
-
 Desde hace unas semanas he estado experimentando un poco con [Tao Framework](http://www.mono-project.com/Tao), un conjunto de recubrimientos a varias librerías para el desarrollo de software multimedia y videojuegos, algo que toda la vida me ha llamado mucho la atención. Aprovechando esto, hace unas semanas me comprometía a dar una charla sobre Tao en una de las reuniones del [GLUC](http://gluc.unicauca.edu.co/), la charla se tituló Programación Multimedia con Mono.
 
 Me llama mucho la atención la idea de tener un framework para el desarrollo de videojuegos realmente multiplataforma, y en este sentido Tao es bastante impresionante, las Dll de Tao funcionan muy bien en distintas plataformas sin recompilar, digo que es sorprendente porque Tao es una librería totalemente escrita a base de llamadas a funcionalidad nativa (Platform Invoke).

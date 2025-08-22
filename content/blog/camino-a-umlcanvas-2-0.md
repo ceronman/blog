@@ -3,8 +3,6 @@ title = "Camino a UMLCanvas 2.0"
 date = 2005-08-16
 +++
 
-## MonoUML
-
 Estos días estoy trabajando bastante en sacar adelante, de una vez por todas, UMLCanvas# 2.0. El trabajo con System.Drawing (GDI+) es bastante agradable. En comparación con GnomeCanvas, System.Drawing es de más bajo nivel, pero tiene la ventaja de ser mucho más flexible. Luego de ver [la noticia de que GTK 2.8 ahora requiere Cairo](http://mail.gnome.org/archives/gnome-announce-list/2005-August/msg00054.html), estoy aún más convencido de que la elección ha sido la adecuada. Aunque lo que hay hasta ahora es bastante primitivo, creo que con todo lo que aprendimos haciendo la primera versión de UMLCanvas#, podemos avanzar lo suficientemente rápido.
 
 El trabajo con Gtk# y System.Drawing es bastante interesante. Gracias a Gtk.DotNet es posible combinar dos librerías de Widgets: Gtk# y Windows.Forms. Más específicamente, Gtk.DotNet es un puente entre Gdk.Drawable y System.Drawing.Graphics, ahora como sabemos que Gtk se basa en Gdk y que Windows.Forms se basa en System.Drawing, podemos llevar esto a la interoperabilidad entre librerías que mencioné al principio.

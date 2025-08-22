@@ -3,9 +3,6 @@ title = "MonoHotDraw"
 date = 2006-12-02
 +++
 
-MonoHotDraw
------------
-
 Por estos dias estoy programando MonoHotDraw, que es el séptimo intento por hacer una librería de diagramación para [MonoUML](http://www.monouml.org/). Se llama MonoHotDraw porque está basado en el diseño de [HotDraw](http://st-www.cs.uiuc.edu/users/brant/HotDraw/) y [JHotDraw](http://www.jhotdraw.org/). MonoHotDraw está escrito en C# con [Mono](http://www.mono-project.com/) y usa varias herramientas de [Gnome](http://www.gnome.org/): [Gtk](http://www.gtk.org/), [Cairo](http://www.cairographics.org/), [Pango](http://www.pango.org/), etc.
 
 [Aquí](http://afrodita.unicauca.edu.co/~ceronman/blog/monohotdraw.ogg) hay un video de una aplicación que estoy escribiendo para una tarea de universidad que usa MonoHotDraw. Es un sencillo editor de mapas mentales. Se supone que debo entregarlo el 18 de diciembre. Tengo que apurarme y convertirlo en algo decente.

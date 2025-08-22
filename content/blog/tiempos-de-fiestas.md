@@ -3,8 +3,6 @@ title = "Tiempos de Fiestas"
 date = 2004-12-29
 +++
 
-## Navidad
-
 La época de navidad siempre es muy agradable. En mi familia es costumbre que el 24 de diciembre nos reunimos en la casa de mi abuela. Es una gran reunión familiar donde asisten muchos de mis tios, primos, abuelos, etc. Esta vez no asistieron tantas personas, debido a que algunos familiares que viven en Bogotá y Medellín no pudieron viajar. Sin embargo la pasamos muy bien. Como siempre, a media noche festejamos, entregamos los regalos y cenamos con un delicioso pernil de cerdo y una gran variedad de dulces navideños.
 
 Antes de la reunión en la casa de mi abuela, rezamos la novena en una finca a las afueras de la ciudad. Desde hace ya varios años que mi abuela organiza la novena en aquella finca, donde antes vivía. La novena se reza en compañia de muchos campecinos de escasos recursos que habitan en los alrededores. Al final se rifan regalos entre los niños campecinos. El último día, el 24, fue bastante especial; entre toda la familia se logró reunir suficientes regalos para que todos los niños tuvieran al menos uno. Es algo que me alegra mucho.
