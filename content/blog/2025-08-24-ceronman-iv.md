@@ -23,7 +23,7 @@ A finales de 2011, el VPS donde estaba alojado *svnwiki* implosionó. Bueno, rea
 
 Para ese entonces, yo ya no escribía tanto. Me tomó algún tiempo darme cuenta de que el blog se había caído. Llevaba varios años usando Twitter, y este se había apoderado de buena parte de mis hábitos de escritura. Todo era más fácil, más superficial, había que pensar menos, había más dopamina.
 
-Sin embargo decidí mudarme de nuevo. De vez en cuando seguía teniendo cosas que escribir que no cabían en un trino. Mientras haya un respiro, el blog no ha muerto. Entonces abrí [uno nuevo en Wordpress](https://ceronman.wordpress.com/).
+Sin embargo decidí mudarme de nuevo. De vez en cuando seguía teniendo cosas que escribir que no cabían en un trino. Mientras haya un aliento, el blog no ha muerto. Entonces abrí [uno nuevo en Wordpress](https://ceronman.wordpress.com/).
 
 En un golpe de suerte, pude recuperar todos los posts de mi antiguo blog de *svnwiki*. Esto fue gracias al (ahora también difunto) [Google Reader](https://en.wikipedia.org/wiki/Google_Reader). Yo estaba suscrito a mi propio blog y, afortunadamente, el *reader* había guardado una copia de todos mis posts. Gracias a eso, pude migrarlos a mi nuevo blog de Wordpress. También migré los viejos posts de Blogspot.
 
@@ -37,9 +37,9 @@ Otra cosa notable de este blog es que fue el primero en tener su propio dominio:
 
 Y por fin llegamos a la versión actual de este blog.
 
-De Wordpress me gustaban sus estadísticas, pero prácticamente odiaba todo lo demás. Su interfaz es un caos y sus múltiples sistemas nuevos y legacy de escribir son un despelote. Escribir posts con código siempre era tedioso y nunca quedaba como quería. Todo esto mientras pagaba una suscripción relativamente cara. Llevaba mucho tiempo queriendo pasarme a otra cosa, algo donde tuviera más control y el flujo de trabajo fuera más parecido a lo que tenía con **svnwiki**. Y que fuera un poco más **indie**.
+De Wordpress me gustaban sus estadísticas, pero prácticamente odiaba todo lo demás. Su interfaz es un caos y sus múltiples sistemas nuevos y legacy de escribir son un despelote. Escribir posts con código siempre era tedioso y nunca quedaba como quería. Todo esto mientras pagaba una suscripción relativamente cara. Llevaba mucho tiempo queriendo pasarme a otra cosa, algo donde tuviera más control y el flujo de trabajo fuera más parecido a lo que tenía con *svnwiki*. Y que fuera un poco más *indie*.
 
-Esta versión usa el generador de webs estáticas Zola. El contenido del blog está en [Github](https://github.com/ceronman/blog), por ahora, y se aloja en [statichost](https://www.statichost.eu/), un servicio de webhosting orientado a la privacidad. El flujo de trabajo está bastante bien y tengo buen control de cómo se ve todo. Todavía faltan varios ajustes, pero me gusta mucho esta versión minimalista.
+Esta versión usa el generador de webs estáticas [Zola](https://www.getzola.org/). El contenido del blog está en [Github](https://github.com/ceronman/blog), por ahora, y se aloja en [statichost](https://www.statichost.eu/), un servicio de webhosting orientado a la privacidad. El flujo de trabajo está bastante bien y tengo buen control de cómo se ve todo. Todavía faltan varios ajustes, pero me gusta mucho esta versión minimalista.
 
 Logré migrar todos mis posts anteriores, aunque no fue muy fácil. Traté de automatizarlo usando IA, pero fracasé. Noté que muchos de mis viejos posts tienen enlaces e imágenes rotos. Traté de recuperar lo que pude, pero hay muchas cosas que se han perdido para siempre. Así es como la web se va pudriendo y no hay mucho que hacer.
 
