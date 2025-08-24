@@ -224,3 +224,9 @@ Rust can be frustrating sometimes, that’s undeniable. But Rust is also very re
 In some areas, Rust feels a bit half-baked. For example, dealing with variance in the type system is confusing and feels very hacky. The new allocator API is not there yet, which would have been very useful when writing my GC. And I think the borrow checker could be smarter in many cases. I would like to write in more detail about these things, but this post is already too long. Nevertheless, I think the language has very good prospects of improving and I’m glad the creators are not afraid of the language not being perfect. I look forward to keeping writing Rust and learning about it.
 
 This is it! Thanks for reading!
+
+### Update:
+
+ - [Discussion on Reddit](https://www.reddit.com/r/rust/comments/opj1pa/my_experience_crafting_an_interpreter_with_rust/)
+ - [Discussion on Hacker News](https://news.ycombinator.com/item?id=35308246)
+ - [Discussion on Lobsters](https://lobste.rs/s/8dqbty/my_experience_crafting_interpreter_with)

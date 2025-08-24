@@ -120,3 +120,7 @@ Back to the beginning, is Rust a mainly functional language? Well, I don’t kno
 Functional composition is another key aspect of FP. There is **map**, **filter** and **fold** in Rust, but functional composition doesn’t seem to be as idiomatic as in FP languages. Recursion is also not very idiomatic in Rust. This is mostly because you actually have **mut**, so you can have imperative loops, whereas in FP languages you can’t mutate local variables so recursion is your only choice. At the smaller scale, Rust is definitely imperative. But I personally think that FP doesn’t bring any advantage at the small scale. It’s at the big scale when avoiding side effects really pays off. That’s the big advantage that FP brings to the table, and that one is covered by Rust’s borrowing rules.
 
 So the verdict is not definitive. I can’t fully say that Rust is a functional language. But one thing that I’m sure of is that Rust is one of the most interesting languages that I have learned so far. The ownership and borrowing system is an amazing innovation that goes way beyond allowing memory safety without garbage collection. This system is actually bringing the best of the functional and imperative worlds together. And I’m very much looking forward to using and learning more about Rust.
+
+### Update:
+
+ - [Discussion on Reddit](https://www.reddit.com/r/rust/comments/iur9ly/is_rust_a_functional_language_in_disguise/)

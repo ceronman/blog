@@ -141,3 +141,7 @@ But it's undeniable that macro generated types hurt the self-documenting propert
 Is there any way to improve things? I don't want Rust to change its trait system or lose macros. These are great and powerful features, even if they have some drawbacks. Besides my previous suggestion of improving naming, which I think goes a long way, IDEs can help a lot too. They could have an easy way of showing all the implemented traits of a given type, including blanket ones. This could be shown while hovering a type, but also in documentation pop ups for signatures. Perhaps there is also a way of showing some compact trait information in the signatures of completion items.
 
 Finally, perhaps it's possible to show a summary of what types and impls a macro call generates. Maybe even for derive macros as well. When a language's type system is so flexible, and there are so many tools for meta-programming, the help of the IDEs becomes extremely valuable. RustRover and VS Code + Rust Analyzer already do some useful things, but I think they are still in their infancy. I'm looking forward for these IDEs to mature and improve the coding experience for Rust.
+
+### Update:
+
+- [Discussion on Reddit](https://www.reddit.com/r/rust/comments/1d2qns1/types_and_selfdocumenting_code_in_rust/)

@@ -308,7 +308,8 @@ Of course readability is a very subjective topic. The problems described here mi
 
 I think that readability is more important than writability for a programming language. Code is usually written once, but read many times. Given that CoffeeScript doesn’t fix any of the fundamental problems of JavaScript, but damages readability, I decided not to use it anymore.
 
-Update:
--------
+### Update:
 
-Another interesting post with some other readability problems in CoffeeScript:[http://ryanflorence.com/2011/case-against-coffeescript/](http://ryanflorence.com/2011/case-against-coffeescript/)
+- Another interesting post with some other readability problems in CoffeeScript:[http://ryanflorence.com/2011/case-against-coffeescript/](http://ryanflorence.com/2011/case-against-coffeescript/)
+- [Discussion on Reddit](https://www.reddit.com/r/programming/comments/10139c/coffeescript_less_typing_bad_readability/)
+- [Discussion on Hacker News](https://news.ycombinator.com/item?id=4533737)

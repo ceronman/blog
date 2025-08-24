@@ -105,3 +105,8 @@ def get_keys(a_dict: '{str: int}') -> '[str]':
 The downside of this flexibility is that it causes some confusion in the community about how annotations should be used. A recent [discussion](http://mail.python.org/pipermail/python-ideas/2012-December/018088.html) in the Python-ideas mailing list unveiled this problem.
 
 Personally, I would love to see this feature more used in the Python community. It has a lot of potential. I started a [small library to work with type annotations](https://github.com/ceronman/typeannotations). It implements the `typechecked` decorator described before, and some other useful things like structural interfaces, unions and logic predicates that can be used as function annotations. It’s still very immature, but I would like to improve it in the future by adding function overloading and other features. A detailed description of the library probably deserves a whole post for it. I would love to hack Jedi to add some basic support for auto-completion based on annotations.
+
+### Update:
+
+- [Discussion on r/programming](https://www.reddit.com/r/programming/comments/1a61wz/a_powerful_unused_feature_of_python_function/)
+- [Discussion on r/Python](http://reddit.com/r/Python/comments/1a5tc6/a_powerful_unused_feature_of_python_function/)
