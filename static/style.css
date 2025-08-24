@@ -87,6 +87,7 @@ div.post blockquote {
 }
 
 h1.title {
+    margin-top: 4rem;
     font-size: xx-large;
 }
 
