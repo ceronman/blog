@@ -39,7 +39,7 @@ Y por fin llegamos a la versión actual de este blog.
 
 De Wordpress me gustaban sus estadísticas, pero prácticamente odiaba todo lo demás. Su interfaz es un caos y sus múltiples sistemas nuevos y legacy de escribir son un despelote. Escribir posts con código siempre era tedioso y nunca quedaba como quería. Todo esto mientras pagaba una suscripción relativamente cara. Llevaba mucho tiempo queriendo pasarme a otra cosa, algo donde tuviera más control y el flujo de trabajo fuera más parecido a lo que tenía con **svnwiki**. Y que fuera un poco más **indie**.
 
-Esta versión usa el generador de webs estáticas Zola. El contenido del blog está en Github, por ahora, y se aloja en [statichost](https://www.statichost.eu/), un servicio de webhosting orientado a la privacidad. El flujo de trabajo está bastante bien y tengo buen control de cómo se ve todo. Todavía faltan varios ajustes, pero me gusta mucho esta versión minimalista.
+Esta versión usa el generador de webs estáticas Zola. El contenido del blog está en [Github](https://github.com/ceronman/blog), por ahora, y se aloja en [statichost](https://www.statichost.eu/), un servicio de webhosting orientado a la privacidad. El flujo de trabajo está bastante bien y tengo buen control de cómo se ve todo. Todavía faltan varios ajustes, pero me gusta mucho esta versión minimalista.
 
 Logré migrar todos mis posts anteriores, aunque no fue muy fácil. Traté de automatizarlo usando IA, pero fracasé. Noté que muchos de mis viejos posts tienen enlaces e imágenes rotos. Traté de recuperar lo que pude, pero hay muchas cosas que se han perdido para siempre. Así es como la web se va pudriendo y no hay mucho que hacer.
 
