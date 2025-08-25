@@ -9,7 +9,7 @@ Esta entrada es acerca de las distintas versiones de este blog. Quise escribir e
 
 ## Ceronman I
 
-La primera versión de este blog comenzó en [Blogspot](https://ceronman.blogspot.com/). Todavía existe esa versión, nunca quise cerrarla. Para ese entonces era estudiante y dedicaba mucho tiempo al [Grupo de Usuarios de Linux de la Universidad](http://gluc.unicauca.edu.co). Uno de los objetivos de ese blog, aparte de divertirse con el Internet de principios de los 2000, era practicar mi inglés, que como se puede ver en las entradas de esa época, era pésimo. Al principio el blog era una especie de bitácora (como eran los blogs antes) de la vida diaria. Pero poco a poco fue cambiando para escribir sobre los proyectos o intereses que pasaban por mi mente. O cosas de tecnología que conocía y me causaban curiosidad. Eventualmente también empecé a escribir en español porque sencillamente era más fácil para mi. Este fue probablemente el periodo más activo de este blog.
+La primera versión de este blog comenzó en [Blogspot](https://ceronman.blogspot.com/). Todavía existe esa versión, nunca quise cerrarla. Para ese entonces era estudiante y dedicaba mucho tiempo al [Grupo de Usuarios de Linux de la Universidad](http://gluc.unicauca.edu.co). Uno de los objetivos de ese blog, aparte de divertirse con el Internet de principios de los 2000, era practicar mi inglés, que como se puede ver en las entradas de esa época, era pésimo. Al principio el blog era una especie de bitácora (como eran los blogs antes) de la vida diaria. Pero poco a poco fue cambiando para escribir sobre los proyectos o intereses que pasaban por mi mente. O cosas de tecnología que conocía y me causaban curiosidad. Eventualmente también empecé a escribir en español porque sencillamente era más fácil para mi. Este fue el periodo más activo de este blog.
 
 ## Ceronman II
 
@@ -33,13 +33,13 @@ En retrospectiva, el lado negativo de esto es que me creó una cierta prevenció
 
 Otra cosa notable de este blog es que fue el primero en tener su propio dominio: [ceronman.com](https://ceronman.com) (que ahora dirige aquí).
 
-## Ceroman IV: The Quest for Peace
+## Ceronman IV: The Quest for Peace
 
 Y por fin llegamos a la versión actual de este blog.
 
 De Wordpress me gustaban sus estadísticas, pero prácticamente odiaba todo lo demás. Su interfaz es un caos y sus múltiples sistemas nuevos y legacy de escribir son un despelote. Escribir posts con código siempre era tedioso y nunca quedaba como quería. Todo esto mientras pagaba una suscripción relativamente cara. Llevaba mucho tiempo queriendo pasarme a otra cosa, algo donde tuviera más control y el flujo de trabajo fuera más parecido a lo que tenía con *svnwiki*. Y que fuera un poco más *indie*.
 
-Esta versión usa el generador de webs estáticas [Zola](https://www.getzola.org/). El contenido del blog está en [Github](https://github.com/ceronman/blog), por ahora, y se aloja en [statichost](https://www.statichost.eu/), un servicio de webhosting orientado a la privacidad. El flujo de trabajo está bastante bien y tengo buen control de cómo se ve todo. Todavía faltan varios ajustes, pero me gusta mucho esta versión minimalista.
+Esta versión usa el generador de webs estáticas [Zola](https://www.getzola.org/). El contenido del blog está en [Github](https://github.com/ceronman/blog), por ahora, y se aloja en [statichost](https://www.statichost.eu/), un servicio de *web hosting* orientado a la privacidad. El flujo de trabajo está bastante bien y tengo buen control de cómo se ve todo. Todavía faltan varios ajustes, pero me gusta mucho esta versión minimalista. Este blog no tiene estadísticas, pero en el futuro me gustaría implementar alguna solución que me permita tenerlas respetando la privacidad de los lectores como [Plausible](https://plausible.io/).
 
 Logré migrar todos mis posts anteriores, aunque no fue muy fácil. Traté de automatizarlo usando IA, pero fracasé. Noté que muchos de mis viejos posts tienen enlaces e imágenes rotos. Traté de recuperar lo que pude, pero hay muchas cosas que se han perdido para siempre. Así es como la web se va pudriendo y no hay mucho que hacer.
 
